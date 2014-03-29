@@ -4,6 +4,7 @@
   session_start();
   error_reporting(0);
   $error_msg = "";
+  echo 'hahahahhahah';
 echo $_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'];
 
   if (!isset($_SESSION['user_id'])) {
