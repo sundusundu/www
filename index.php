@@ -8,7 +8,8 @@
   if (!isset($_SESSION['user_id'])) {
     if (isset($_POST['submit'])) {
  
-       $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+       //$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+	   $dbc = mysqli_connect($_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'], $_SERVER['ebroot'], $_SERVER['11111111'], $_SERVER['ebdb'], $_SERVER['3306']);
 
       $user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
       $user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
