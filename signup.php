@@ -16,9 +16,12 @@
   $dbc = mysqli_connect($_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'], $_SERVER['ebroot'], $_SERVER['11111111'], $_SERVER['ebdb'], $_SERVER['3306']);
 
   if (isset($_POST['submit'])) {
-    $username = mysqli_real_escape_string($dbc, trim($_POST['username']));
-    $password1 = mysqli_real_escape_string($dbc, trim($_POST['password1']));
-    $password2 = mysqli_real_escape_string($dbc, trim($_POST['password2']));
+    //$username = mysqli_real_escape_string($dbc, trim($_POST['username']));
+    //$password1 = mysqli_real_escape_string($dbc, trim($_POST['password1']));
+    //$password2 = mysqli_real_escape_string($dbc, trim($_POST['password2']));
+	$username = $_POST['username'];
+	$password1 = $_POST['password1'];
+	$password2 = $_POST['password2'];
 
     if (!empty($username) && !empty($password1) && !empty($password2) && ($password1 == $password2)) {
       $query = "SELECT * FROM esverta_user WHERE username = '$username'";
