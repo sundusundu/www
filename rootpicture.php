@@ -49,12 +49,12 @@
 
   if (isset($_POST['submit'])) {
     // Grab the profile data from the POST
-    $title = mysqli_real_escape_string($dbc, trim($_POST['title']));
-    $author = mysqli_real_escape_string($dbc, trim($_POST['author']));
-    $paintdate = mysqli_real_escape_string($dbc, trim($_POST['paintdate']));
-    $discribe = mysqli_real_escape_string($dbc, trim($_POST['discribe']));
-    $comment = mysqli_real_escape_string($dbc, trim($_POST['comment']));
-    $new_picture = mysqli_real_escape_string($dbc, trim($_FILES['new_picture']['name']));
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $paintdate = $_POST['paintdate'];
+    $discribe = $_POST['discribe'];
+    $comment = $_POST['comment'];
+    $new_picture = $_FILES['new_picture']['name'];
     $new_picture_type = $_FILES['new_picture']['type'];
     $new_picture_size = $_FILES['new_picture']['size']; 
     list($new_picture_width, $new_picture_height) = getimagesize($_FILES['new_picture']['tmp_name']);

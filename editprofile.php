@@ -29,12 +29,12 @@
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   if (isset($_POST['submit'])) {
-    $first_name = mysqli_real_escape_string($dbc, trim($_POST['firstname']));
-    $last_name = mysqli_real_escape_string($dbc, trim($_POST['lastname']));
-    $gender = mysqli_real_escape_string($dbc, trim($_POST['gender']));
-    $birthdate = mysqli_real_escape_string($dbc, trim($_POST['birthdate']));
-    $city = mysqli_real_escape_string($dbc, trim($_POST['city']));
-    $state = mysqli_real_escape_string($dbc, trim($_POST['state']));
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $gender = $_POST['gender'];
+    $birthdate = $_POST['birthdate'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
     
 
 	
