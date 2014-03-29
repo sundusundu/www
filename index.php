@@ -4,10 +4,10 @@
   session_start();
   error_reporting(0);
   $error_msg = "";
+echo $_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'];
 
   if (!isset($_SESSION['user_id'])) {
     if (isset($_POST['submit'])) {
- 
        //$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	   $dbc = mysqli_connect('aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com', 'ebroot', '11111111', 'ebdb', 3306);
 
