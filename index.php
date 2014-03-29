@@ -11,11 +11,13 @@
        //$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	   $dbc = mysqli_connect($_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'], $_SERVER['ebroot'], $_SERVER['11111111'], $_SERVER['ebdb'], $_SERVER['3306']);
 
-      $user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
-      $user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
-	  $name = $_POST['firstname'] . ' ' . $_POST['lastname'];
-  	  $email = mysqli_real_escape_string($dbc, trim($_POST['email']));
-  	  $other = mysqli_real_escape_string($dbc, trim($_POST['other']));
+      //$user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
+      //$user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+	  $user_username = $_POST['username'];
+	  $user_password = $_POST['password'];
+	  //$name = $_POST['firstname'] . ' ' . $_POST['lastname'];
+  	  //$email = mysqli_real_escape_string($dbc, trim($_POST['email']));
+  	  //$other = mysqli_real_escape_string($dbc, trim($_POST['other']));
 
       if (!empty($user_username) && !empty($user_password)) {
         $query = "SELECT user_id, username FROM esverta_user WHERE username = '$user_username' AND password = SHA('$user_password')";
