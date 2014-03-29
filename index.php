@@ -68,8 +68,6 @@ body {
   <?php
   if (empty($_SESSION['user_id'])) {
     echo '<p class="error">' . $error_msg . '</p>';
-	echo 'hahahahhahah';
-echo $_SERVER['aalio1rdc2w9hm.c6nr3pcl42so.us-west-2.rds.amazonaws.com'];
 ?>
 
 <p>&nbsp;</p>
