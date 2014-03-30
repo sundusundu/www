@@ -60,7 +60,7 @@
     }
 	if($picture == null or $picture == ""){$picture = $new_picture;}
 	else{
-	$picture = $old_picture.'/'.$new_picture;}
+	$picture = $picture.'/'.$new_picture;}
 	
 	
 
