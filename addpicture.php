@@ -53,7 +53,7 @@
     $row = mysqli_fetch_array($data);
 
     if ($row != NULL) {
-      $old_picture = $row['picture'];
+      $picture = $row['picture'];
     }
     else {
       echo '<p class="error">There was a problem accessing your profile.</p>';
