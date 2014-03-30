@@ -101,7 +101,7 @@
       $data = mysqli_query($dbc, $query);
 	  if (mysqli_num_rows($data) == 0) {
         // The username is unique, so insert the data into the database
-        $query = "INSERT INTO esverta_picture (title, author, paintdate, discribe, comment, picture) VALUES ('$title', '$author', '$paintdate', '$discribe', '$comment', '$picture')";
+        $query = "INSERT INTO esverta_picture (title, author, paintdate, discribe, comment, picture) VALUES ('$title', '$author', '$paintdate', '$discribe', '$comment', '$new_picture')";
        mysqli_query($dbc, $query);
 
         // Confirm success with the user
